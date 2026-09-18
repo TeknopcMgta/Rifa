@@ -9,12 +9,12 @@
     <META PROPERTY="OG:TITLE" CONTENT="RIFA">
     <META PROPERTY="OG:DESCRIPTION" CONTENT="NUESTRO RIFA DIGITAL.">
     <!-- OPCIÓN 1: IMAGEN DE 512PX (ALTA PRIORIDAD) -->
-<META PROPERTY="OG:IMAGE" CONTENT="HTTPS://RAW.GITHUBUSERCONTENT.COM/TEKNOPCMGTA/Rifa/MAIN/icon-512.png">
-<META PROPERTY="OG:IMAGE:WIDTH" CONTENT="512">
-<META PROPERTY="OG:IMAGE:HEIGHT" CONTENT="512">
-<META PROPERTY="OG:IMAGE:TYPE" CONTENT="IMAGE/PNG">
+    <META PROPERTY="OG:IMAGE" CONTENT="HTTPS://RAW.GITHUBUSERCONTENT.COM/TEKNOPCMGTA/Rifa/MAIN/icon-512.png">
+    <META PROPERTY="OG:IMAGE:WIDTH" CONTENT="512">
+    <META PROPERTY="OG:IMAGE:HEIGHT" CONTENT="512">
+    <META PROPERTY="OG:IMAGE:TYPE" CONTENT="IMAGE/PNG">
     <!-- URL RAW DE LA IMAGEN (CRÍTICO PARA WHATSAPP) -->
-        <META PROPERTY="OG:IMAGE" CONTENT="https://raw.githubusercontent.com/TeknopcMgta/Rifa/main/icon-192.png">
+    <META PROPERTY="OG:IMAGE" CONTENT="https://raw.githubusercontent.com/TeknopcMgta/Rifa/main/icon-192.png">
     <META PROPERTY="OG:IMAGE:TYPE" CONTENT="IMAGE/PNG">
     <META PROPERTY="OG:URL" CONTENT="HTTPS://TEKNOPCMGTA.GITHUB.IO/Rifa/">
     <META PROPERTY="OG:TYPE" CONTENT="WEBSITE">
@@ -30,6 +30,19 @@
 </HEAD>
 <BODY>
     <!-- MANTENIENDO TU URL ORIGINAL INTACTA PARA QUE NO SE ROMPA EL SCRIPT -->
-    <IFRAME SRC="https://script.google.com/macros/s/AKfycbyZSHoJLs4-tmheD31c6z1aINuLEcvlWcFjUXMfNAOIKV48sVKxlGIRAkHNe_YjDFxx/exec"></IFRAME>
+    <IFRAME ID="rifa-frame" SRC=""></IFRAME>
+
+    <SCRIPT>
+        var BASE_URL = "https://script.google.com/macros/s/AKfycbyZSHoJLs4-tmheD31c6z1aINuLEcvlWcFjUXMfNAOIKV48sVKxlGIRAkHNe_YjDFxx/exec";
+        
+        var urlParams = new URLSearchParams(window.location.search);
+        var vendor = urlParams.get('v');
+
+        if (vendor) {
+            BASE_URL += (BASE_URL.indexOf('?') === -1 ? '?' : '&') + "v=" + encodeURIComponent(vendor);
+        }
+
+        document.getElementById('rifa-frame').src = BASE_URL;
+    </SCRIPT>
 </BODY>
 </HTML>
