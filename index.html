@@ -1,48 +1,40 @@
 <!DOCTYPE HTML>
-<HTML LANG="ES">
-<HEAD>
-    <META CHARSET="UTF-8">
-    <META NAME="VIEWPORT" CONTENT="WIDTH=DEVICE-WIDTH, INITIAL-SCALE=1.0, USER-SCALABLE=NO">
-    <TITLE>RIFA</TITLE>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Rifa Digital</title>
     
-    <!-- ETIQUETAS DE VISTA PREVIA (REDES SOCIALES Y WHATSAPP) -->
-    <META PROPERTY="OG:TITLE" CONTENT="RIFA">
-    <META PROPERTY="OG:DESCRIPTION" CONTENT="NUESTRO RIFA DIGITAL.">
-    <!-- OPCIÓN 1: IMAGEN DE 512PX (ALTA PRIORIDAD) -->
-    <META PROPERTY="OG:IMAGE" CONTENT="HTTPS://RAW.GITHUBUSERCONTENT.COM/TEKNOPCMGTA/Rifa/MAIN/icon-512.png">
-    <META PROPERTY="OG:IMAGE:WIDTH" CONTENT="512">
-    <META PROPERTY="OG:IMAGE:HEIGHT" CONTENT="512">
-    <META PROPERTY="OG:IMAGE:TYPE" CONTENT="IMAGE/PNG">
-    <!-- URL RAW DE LA IMAGEN (CRÍTICO PARA WHATSAPP) -->
-    <META PROPERTY="OG:IMAGE" CONTENT="https://raw.githubusercontent.com/TeknopcMgta/Rifa/main/icon-192.png">
-    <META PROPERTY="OG:IMAGE:TYPE" CONTENT="IMAGE/PNG">
-    <META PROPERTY="OG:URL" CONTENT="HTTPS://TEKNOPCMGTA.GITHUB.IO/Rifa/">
-    <META PROPERTY="OG:TYPE" CONTENT="WEBSITE">
+    <!-- ETIQUETAS DE VISTA PREVIA (WHATSAPP Y REDES SOCIALES) -->
+    <meta property="og:title" content="Rifa">
+    <meta property="og:description" content="Rifa DIGITAL.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://teknopcmgta.github.io/Rifa/">
     
-    <!-- CONFIGURACIÓN BÁSICA PARA ACCESO DIRECTO -->
-    <LINK REL="MANIFEST" HREF="manifest.json">
-    <LINK REL="APPLE-TOUCH-ICON" HREF="icon-192.png">
+    <!-- IMAGEN DE VISTA PREVIA (ENLACE DIRECTO A GITHUB PAGES) -->
+    <meta property="og:image" content="https://teknopcmgta.github.io/Rifa/icon-192.png">
+    <meta property="og:image:secure_url" content="https://teknopcmgta.github.io/Rifa/icon-192.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="192">
+    <meta property="og:image:height" content="192">
+    
+    <!-- FORMATO DE TARJETA CON ICONO A LA IZQUIERDA -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Rifa">
+    <meta name="twitter:description" content="Rifa DIGITAL.">
+    <meta name="twitter:image" content="https://teknopcmgta.github.io/Rifa/icon-192.png">
 
-    <STYLE>
-        BODY, HTML { MARGIN: 0; PADDING: 0; HEIGHT: 100%; OVERFLOW: HIDDEN; BACKGROUND: #FFFFFF; }
-        IFRAME { WIDTH: 100%; HEIGHT: 100%; BORDER: NONE; }
-    </STYLE>
-</HEAD>
-<BODY>
-    <!-- MANTENIENDO TU URL ORIGINAL INTACTA PARA QUE NO SE ROMPA EL SCRIPT -->
-    <IFRAME ID="rifa-frame" SRC=""></IFRAME>
+    <!-- CONFIGURACIÓN PWA Y MANIFIESTO -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-192.png">
 
-    <SCRIPT>
-        var BASE_URL = "https://script.google.com/macros/s/AKfycbyZSHoJLs4-tmheD31c6z1aINuLEcvlWcFjUXMfNAOIKV48sVKxlGIRAkHNe_YjDFxx/exec";
-        
-        var urlParams = new URLSearchParams(window.location.search);
-        var vendor = urlParams.get('v');
-
-        if (vendor) {
-            BASE_URL += (BASE_URL.indexOf('?') === -1 ? '?' : '&') + "v=" + encodeURIComponent(vendor);
-        }
-
-        document.getElementById('rifa-frame').src = BASE_URL;
-    </SCRIPT>
-</BODY>
-</HTML>
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #FFFFFF; }
+        iframe { width: 100%; height: 100%; border: none; }
+    </style>
+</head>
+<body>
+    <iframe src="https://script.google.com/macros/s/AKfycbyZSHoJLs4-tmheD31c6z1aINuLEcvlWcFjUXMfNAOIKV48sVKxlGIRAkHNe_YjDFxx/exec"></iframe>
+</body>
+</html>
+     
